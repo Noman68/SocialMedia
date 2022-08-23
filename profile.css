@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root{
+--primary-color-hue: 252;
+--dark-color-lightness: 17%;
+--light-color-lightness: 95%;
+--white-color-lightness: 100%;
+
+--color-dark: hsl(252, 30%, var(--dark-color-lightness));
+--color-light: hsl(252, 32%, var(--light-color-lightness));
+--color-white: hsl(252, 30%, var(--white-color-lightness));
+--color-primary: hsl(var(--primary-color-hue), 75%, 60%);
+--color-gray: hsl(var(--primary-color-hue), 15%, 65%);
+--color-secondary: hsl(252, 100%, 90%);
+--color-success: hsl(120, 95%, 65%);
+--color-danger: hsl(0, 95%, 65%);
+--color-black: hsl(252, 30%, 10%);
+
+--border-radius: 2rem;
+--card-border-radius: 1rem;
+--btn-padding: 0.6rem 2rem;
+--search-padding: 0.6rem 1rem;
+--card-padding: 1rem;
+
+--sticky-top-left: 5.4rem;
+--sticky-top-right: -18rem;
+}
+
+*, *::before, *::after{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+outline: 0;
+text-decoration: none;
+list-style: none;
+border: none;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    color: var(--color-dark);
+    background: var(--color-light);
+    overflow-x: hidden;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container-1{
+    width: 80%;
+    margin: 0 auto;
+    background: var(--color-white);
+    border-radius: 10px;
+}
+
+/* .profile-photo{
+    width: 2.7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+} */
+
+img{
+    display: block;
+    width: 100%;
+}
+
+.btn{
+    display: inline-block;
+    padding: var(--btn-padding);
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 0.9rem;
+}
+
+.btn:hover{
+    opacity: 0.8;
+}
+
+.btn-primary{
+    background: var(--color-primary);
+    color: white;
+}
+
+.bold{
+    font-weight: 500;
+}
+
+.text-muted{
+    color: var(--color-gray);
+}
+
+
+/* NAVBAR */
+
+nav{
+    width: 100%;
+    background: var(--color-white);
+    padding: 0.7rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+nav .create{
+    display: flex;
+    font-size: 1.5rem;
+}   
+
+nav span i{
+    padding-left: 1rem;
+}
+
+nav span i:hover{
+    color: var(--color-primary);
+}
+
+nav .log:hover{
+    color: var(--color-primary);
+}
+
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-bar{
+    background: var(--color-light);
+    border-radius: var(--border-radius);
+    padding: var(--search-padding);
+}
+
+.search-bar input[type = "search"]{
+    background: transparent;
+    width: 30vw;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: var(--color-dark);
+}
+
+.search-bar input[type="search"]::placeholder{
+    color: var(--color-gray);
+}
+
+/* HEADER */
+
+header{
+    position: relative;
+    top: 5.4rem;
+}
+
+.container-1 .cover{
+    position: relative;
+    height: 17rem;
+}
+
+.container-1 .cover img{
+   width: 100%;
+   height: 20rem;
+   border-radius: 1.5rem;
+}
+
+/* -------------------------------- HEADER PROFILE DATA --------------------- */
+
+header .container-1 .profile-data{
+    /* top: 5.4rem; */
+    display: grid;
+    grid-template-columns: 18vw auto 20vw; 
+    column-gap: 2rem;
+    position: relative;
+    /* background: yellow; */
+}
+
+/* ------------------------------------- 1 --------------------------- */
+
+.container-1 .profile-data .profile-photo{
+    width: 14rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    border: 5px solid var(--color-white);
+    height: max-content;
+    position: sticky;
+    top: var(--sticky-top-left);
+    /* display: none; */
+}
+
+
+/* ---------------------------------- 2 --------------------------- */
+
+.profile-bio{
+    height: max-content;
+    position: sticky;
+    top: var(--sticky-top-left);
+}
+
+.profile-bio .name{
+    font-size: 2rem;
+}
+
+.profile-bio .friends.profile{
+    font-size: 1rem;
+}
+
+.profile-bio .liked-by{
+    display: flex;
+}
+
+.profile-bio .liked-by span{
+    width: 2rem;
+    height: 2rem;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--color-white);
+    margin-left: -0.6rem;
+}
+
+.profile-bio .liked-by span:first-child{
+    margin: 0;
+}
+
+/* -------------------------------------------- 3------------------------------ */
+
+.profile-data .profile-action{
+    height: max-content;
+    top: 5.4rem;
+    bottom: 0;
+}
+
+
+.profile-data .upload-cover{
+    position: absolute;
+    right: 1rem;
+}
+
+
+hr {
+    display: block;
+    margin-top: 5.5rem;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0.2px inset var(--color-gray);
+    width: 70%;
+}
+
+
+.create-post{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    background:var(--color-white) ;
+    padding: 0.4rem var(--card-padding);
+    border-radius: var(--border-radius);
+}
+
+.create-post input[type="text"]{
+    justify-self: start;
+    width: 100%;
+    height: 10rem;
+    padding-left: 1rem;
+    background: transparent;
+    color: var(--color-dark);
+    margin-right: 1rem;
+    word-wrap: break-word;
+}
+
+.profile-photo{
+    width: 2.7rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+}
